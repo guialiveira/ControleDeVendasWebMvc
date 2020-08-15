@@ -37,7 +37,9 @@ namespace ControleDeVendasWebMvc
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<ControleDeVendasWebMvcContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ControleDeVendasWebMvcContext")));
+                    options.UseMySql(Configuration.GetConnectionString("ControleDeVendasWebMvcContext"), builder =>
+                        builder.MigrationsAssembly("ControleDeVendasWebMvc")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
