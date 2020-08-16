@@ -24,6 +24,7 @@ namespace ControleDeVendasWebMvc.Services
 
         public void Insert(Seller obj)
         {
+            obj.Department = _context.Department.First(); //solução pra dar um departamento pro vendedor
             _context.Add(obj);
             _context.SaveChanges();
 

@@ -14,6 +14,7 @@ namespace ControleDeVendasWebMvc.Models
         public double BaseSalary { get; set; }
 
         public Department Department { get; set; }
+        public int DepartmentId { get; set; }
 
         public ICollection<SellesRecord> Sales { get; set; } = new List<SellesRecord>();
 
