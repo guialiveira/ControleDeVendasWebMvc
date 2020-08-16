@@ -1,5 +1,7 @@
 ﻿using ControleDeVendasWebMvc.Data;
 using ControleDeVendasWebMvc.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +30,18 @@ namespace ControleDeVendasWebMvc.Services
             _context.SaveChanges();
 
         }
+
+        public Seller BuscaPorId(int id)
+        {
+            return _context.Seller.FirstOrDefault(obj => obj.Id == id);
+        }
+
+        public void Remove(int id)
+        {
+            var obj = _context.Seller.Find(id);
+            _context.Seller.Remove(obj);
+            _context.SaveChanges();
+        }
+
     }
 }
