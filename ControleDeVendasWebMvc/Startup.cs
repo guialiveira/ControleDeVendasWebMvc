@@ -40,14 +40,18 @@ namespace ControleDeVendasWebMvc
                     options.UseMySql(Configuration.GetConnectionString("ControleDeVendasWebMvcContext"), builder =>
                         builder.MigrationsAssembly("ControleDeVendasWebMvc")));
 
+            //registrando no sistema de ingeção de dependencia
+            services.AddScoped<SeedingService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingService seedingService)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                seedingService.Seed(); //cria o banco
             }
             else
             {
