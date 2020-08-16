@@ -43,7 +43,8 @@ namespace ControleDeVendasWebMvc
 
             //registrando no sistema de ingeção de dependencia
             services.AddScoped<SeedingService>();
-            services.AddScoped<SellerService>();
+            services.AddScoped<SellerService>();//serviço de vendedor
+            services.AddScoped<DepartmentService>();
 
         }
 
