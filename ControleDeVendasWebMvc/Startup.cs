@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ControleDeVendasWebMvc.Data;
+using ControleDeVendasWebMvc.Services;
 
 namespace ControleDeVendasWebMvc
 {
@@ -42,6 +43,7 @@ namespace ControleDeVendasWebMvc
 
             //registrando no sistema de ingeção de dependencia
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
