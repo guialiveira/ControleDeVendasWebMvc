@@ -1,7 +1,7 @@
-<img src="prints/CapturarVendedores.PNG" width="200">
-<img src="prints/CapturarU.PNG" width="200">
-<img src="prints/CapturarD.png" width="200">
-<img src="prints/CapturarC.png" width="200">
+<img src="prints/CapturarVendedores.PNG">
+<img src="prints/CapturarU.PNG">
+<img src="prints/CapturarD.PNG">
+<img src="prints/CapturarC.PNG">
 
 
 Para criar o banco:
