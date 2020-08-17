@@ -1,8 +1,9 @@
 
-
 Para criar o banco:
 
-    Package Manager Console
+    Ter o mysql instalado, rodando e configurar root senha 123456
+
+    No Package Manager Console:
     o Add-Migration Initial
     o Update-Database
 
