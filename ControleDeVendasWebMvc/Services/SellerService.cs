@@ -38,9 +38,16 @@ namespace ControleDeVendasWebMvc.Services
 
         public async Task RemoveAsync(int id)
         {
-            var obj = await _context.Seller.FindAsync(id);
-            _context.Seller.Remove(obj);
-            await _context.SaveChangesAsync();
+            try
+            {
+                var obj = await _context.Seller.FindAsync(id);
+                _context.Seller.Remove(obj);
+                await _context.SaveChangesAsync();
+            }
+            catch(DbUpdateException e)
+            {
+                throw new IntegrityException(e.Message + "   Não posso deletar o vendedor porque tem vendas vinculadas ao mesmo");
+            }
         }
 
         public async Task UpdateAsync(Seller obj)
