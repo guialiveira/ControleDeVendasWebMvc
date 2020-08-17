@@ -9,17 +9,25 @@ namespace ControleDeVendasWebMvc.Models
     public class Seller
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "{0} obrigatório")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "O tamanho do {0} de ver entre {2} e {1}")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "{0} obrigatório")]
+        [EmailAddress(ErrorMessage = "Insira um email valido")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "{0} obrigatório")]
         [Display(Name = "Aniversário")]
         [DataType(DataType.Date)] //para n exigir hora
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyy}")]
         public DateTime BirthDate { get; set; }
 
-
+        [Required(ErrorMessage = "{0} obrigatório")]
         [Display(Name= "Salário Base")]
         [DisplayFormat(DataFormatString = "{0:F2}")]//duas casas decimais
+        [Range(100.0, 50000.0, ErrorMessage = "{0} deve ser entre {1} e {2}")]
+
         public double BaseSalary { get; set; }
 
         public Department Department { get; set; }

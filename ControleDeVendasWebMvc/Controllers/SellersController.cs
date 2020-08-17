@@ -37,6 +37,15 @@ namespace ControleDeVendasWebMvc.Controllers
         [ValidateAntiForgeryToken] // previne ataque 
         public IActionResult Create(Seller seller)
         {
+
+            if (!ModelState.IsValid)//Validação do lado do servido
+            {
+                var departments = _departmentService.FindAll();
+                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
+                return View(viewModel);
+
+                return View(seller);
+            }
             _sellerService.Insert(seller);
             return RedirectToAction(nameof(Index));
         }
@@ -105,7 +114,13 @@ namespace ControleDeVendasWebMvc.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Seller seller)
         {
-            if(id != seller.Id)
+            if (!ModelState.IsValid)//Validação do lado do servido
+            {
+                var departments = _departmentService.FindAll();
+                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
+                return View(viewModel);
+            }
+            if (id != seller.Id)
             {
                 return RedirectToAction(nameof(Error), new { Message = "Ids não correspondem" });
             }
