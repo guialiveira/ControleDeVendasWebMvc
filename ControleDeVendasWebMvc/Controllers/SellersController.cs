@@ -23,7 +23,7 @@ namespace ControleDeVendasWebMvc.Controllers
 
         public IActionResult Index()
         {
-            var list = _sellerService.FindAll();            
+            var list = _sellerService.FindAll();
             return View(list);
         }
         public IActionResult Create()
@@ -65,5 +65,22 @@ namespace ControleDeVendasWebMvc.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        public IActionResult Detalhes(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var obj = _sellerService.BuscaPorId(id.Value);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
     }
 }
