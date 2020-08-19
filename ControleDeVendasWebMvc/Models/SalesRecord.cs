@@ -4,7 +4,7 @@ using System;
 namespace ControleDeVendasWebMvc.Models
 {
     //Modelo de Registro de vendas
-    public class SellesRecord
+    public class SalesRecord
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
@@ -12,12 +12,12 @@ namespace ControleDeVendasWebMvc.Models
         public SeleStatus Status { get; set; }
         public Seller Seller { get; set; }
 
-        public SellesRecord()
+        public SalesRecord()
         {
 
         }
 
-        public SellesRecord(int id, DateTime date, double amount, SeleStatus status, Seller seller)
+        public SalesRecord(int id, DateTime date, double amount, SeleStatus status, Seller seller)
         {
             Id = id;
             Date = date;

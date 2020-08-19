@@ -33,7 +33,7 @@ namespace ControleDeVendasWebMvc.Models
         public Department Department { get; set; }
         public int DepartmentId { get; set; }
 
-        public ICollection<SellesRecord> Sales { get; set; } = new List<SellesRecord>();
+        public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
         {
@@ -51,12 +51,12 @@ namespace ControleDeVendasWebMvc.Models
         }
 
         //Adiciona uma venda na lista do vendedor
-        public void AddSales(SellesRecord sr)
+        public void AddSales(SalesRecord sr)
         {
             Sales.Add(sr);
         }
 
-        public void RemoveSales(SellesRecord sr)
+        public void RemoveSales(SalesRecord sr)
         {
             Sales.Remove(sr);
         }

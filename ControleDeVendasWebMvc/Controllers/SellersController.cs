@@ -75,7 +75,7 @@ namespace ControleDeVendasWebMvc.Controllers
             }
             catch(IntegrityException e)
             {
-                return RedirectToAction(nameof(Error), new { Message = e.Message });
+                return RedirectToAction(nameof(Error), new { message = e.Message });
             }
         }
 
