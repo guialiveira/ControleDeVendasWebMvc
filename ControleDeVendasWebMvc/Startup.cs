@@ -47,6 +47,7 @@ namespace ControleDeVendasWebMvc
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();//serviço de vendedor
             services.AddScoped<DepartmentService>();
+            services.AddScoped<SalesRecordsService>();
 
         }
 
