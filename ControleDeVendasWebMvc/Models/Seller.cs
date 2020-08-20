@@ -11,7 +11,7 @@ namespace ControleDeVendasWebMvc.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "{0} obrigatório")]
-        [StringLength(60, MinimumLength = 3, ErrorMessage = "O tamanho do {0} de ver entre {2} e {1}")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "O tamanho do {0} deve ser entre {2} e {1}")]
         public string Name { get; set; }
         [Required(ErrorMessage = "{0} obrigatório")]
         [EmailAddress(ErrorMessage = "Insira um email valido")]

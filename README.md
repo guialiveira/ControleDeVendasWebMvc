@@ -1,15 +1,26 @@
-<img src="prints/CapturarVendedores.PNG">
-<img src="prints/CapturarU.PNG">
-<img src="prints/CapturarD.PNG">
-<img src="prints/CapturarC.PNG">
+Registro de vendas Web
+
+Arquitetura MVC:
+<img src="prints/MVC.PNG">
+
+Modelagem:
+<img src="prints/DiagramaDeClass.PNG">
+
+Prints:
+<img src="prints/Vendedores.PNG">
+<img src="prints/Valida.PNG">
+<img src="prints/Update.PNG">
+<img src="prints/Deletar.PNG">
+<img src="prints/BuscaS.PNG">
+<img src="prints/BuscaG.PNG">
 
 
-Para criar o banco:
+Conexão DB:
 
-    Ter o mysql instalado, rodando e configurar root senha 123456
+    Ter o mysql instalado e configurar user:root senha:123456
 
     No Package Manager Console:
     o Add-Migration Initial
     o Update-Database
 
-Style usado mudado no layout e colocando arquivo no www/lib/css = https://bootswatch.com/3/flatly/
+CSS usado www/lib/css: https://bootswatch.com/3/flatly/
