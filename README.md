@@ -1,18 +1,22 @@
 Registro de vendas Web
-
+<br/>
+<br/>
 Arquitetura MVC:
+<br/>
 <img src="prints/MVC.PNG">
-
+<br/><br/>
 Modelagem:
+<br/>
 <img src="prints/DiagramaDeClass.PNG">
-
+<br/><br/>
 Prints:
-<img src="prints/Vendedores.PNG">
-<img src="prints/Valida.PNG">
-<img src="prints/Update.PNG">
-<img src="prints/Deletar.PNG">
-<img src="prints/BuscaS.PNG">
-<img src="prints/BuscaG.PNG">
+<br/><br/>
+<img src="prints/Vendedores.PNG"><br/><br/>
+<img src="prints/Valida.PNG"><br/><br/>
+<img src="prints/Update.PNG"><br/><br/>
+<img src="prints/Deletar.PNG"><br/><br/>
+<img src="prints/BuscaS.PNG"><br/><br/>
+<img src="prints/BuscaG.PNG"><br/><br/>
 
 
 Conexão DB:
